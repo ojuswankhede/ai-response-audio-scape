@@ -1,0 +1,118 @@
+{
+  "manifest_version": 3,
+  "name": "AI Response Audio Scape",
+  "version": "1.0.4",
+  "description": "Plays soothing audio loops until the AI response completes.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://*.gemini.google.com/*",
+    "https://grok.com/*",
+    "https://*.grok.com/*",
+    "https://x.ai/*",
+    "https://*.x.ai/*",
+    "https://perplexity.ai/*",
+    "https://www.perplexity.ai/*",
+    "https://copilot.microsoft.com/*",
+    "https://chat.deepseek.com/*",
+    "https://*.deepseek.com/*",
+    "https://chat.mistral.ai/*",
+    "https://poe.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-response-audio-scape@ojuswankhede.com",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "is_data_collected": false
+      }
+    },
+    "safari": {
+      "strict_min_version": "15.4"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Response Audio Scape",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://*.gemini.google.com/*",
+        "https://grok.com/*",
+        "https://*.grok.com/*",
+        "https://x.ai/*",
+        "https://*.x.ai/*",
+        "https://perplexity.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://chat.deepseek.com/*",
+        "https://*.deepseek.com/*",
+        "https://chat.mistral.ai/*",
+        "https://poe.com/*"
+      ],
+      "all_frames": true,
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "rain_loop.mp3",
+        "zen_chimes.mp3",
+        "deep_space.mp3",
+        "lofi_hum.mp3",
+        "icon16.png",
+        "icon48.png",
+        "icon128.png"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://*.gemini.google.com/*",
+        "https://grok.com/*",
+        "https://*.grok.com/*",
+        "https://x.ai/*",
+        "https://*.x.ai/*",
+        "https://perplexity.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://chat.deepseek.com/*",
+        "https://*.deepseek.com/*",
+        "https://chat.mistral.ai/*",
+        "https://poe.com/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self'; media-src 'self' data: blob:; img-src 'self' data:;"
+  }
+}

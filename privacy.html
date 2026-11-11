@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — AI Response Audio Scape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="setup-body">
+  <!-- Top Navigation with Prominent Developer Credit -->
+  <nav class="setup-nav">
+    <div class="setup-nav-inner">
+      <div class="brand-group">
+        <img src="icon48.png" alt="AI Response Audio Scape Logo" class="brand-logo">
+        <div>
+          <div class="brand-title">AI Response Audio Scape</div>
+          <div class="brand-subtitle">Official Privacy Policy &amp; Security Disclosures</div>
+        </div>
+      </div>
+      <div class="credit-pill">
+        <span>✨ Built by Ojus Wankhede using AI</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="setup-container">
+    <section class="privacy-box">
+      <h2>🛡️ Official Privacy Policy — 100% Local &amp; Zero Data Collection</h2>
+      <p class="privacy-intro-text">
+        <strong>Last Updated:</strong> November 2026<br>
+        <strong>Extension Name:</strong> AI Response Audio Scape<br>
+        <strong>Developer:</strong> Ojus Wankhede (<span class="email-highlight">ojuswankhede@gmail.com</span>)<br>
+        <strong>Single Purpose:</strong> Plays a soothing, continuous audio loop strictly while supported AI chatbots are actively thinking or generating a response, and halts playback immediately when generation finishes.
+      </p>
+
+      <ul class="feature-list">
+        <li><strong>Zero Data Collection or Transmission:</strong> AI Response Audio Scape does not collect, log, track, harvest, inspect, or transmit any user information, personal data, chat prompts, AI responses, IP addresses, browsing histories, or usage analytics. Zero bytes of data ever leave the user's local device.</li>
+        <li><strong>Zero External Network Calls:</strong> The extension makes zero remote API requests, zero tracking calls, zero telemetry pings, and zero dynamic CDN loads. Every script, stylesheet, icon, and audio asset is 100% locally bundled within the extension package.</li>
+        <li><strong>Strict Content Security Policy (CSP):</strong> Enforces <code>script-src 'self'; object-src 'self'; style-src 'self';</code> with zero <code>eval()</code>, zero dynamic code execution (no <code>new Function()</code>), and zero remote script injection.</li>
+        <li><strong>Local On-Device Storage Only:</strong> Sound preferences, volume levels, master toggle states, and optional custom user-uploaded audio files are stored exclusively on the user's local machine via <code>chrome.storage.local</code> / <code>browser.storage.local</code>. This data is never synchronized to external servers and is erased permanently when the extension is uninstalled.</li>
+        <li><strong>No Third-Party Sharing:</strong> No data is ever sold, leased, shared, or transferred to advertisers, brokers, or third parties.</li>
+      </ul>
+    </section>
+
+    <!-- Detailed Permission Justifications (for Edge, Firefox, Chrome, Opera Reviewers) -->
+    <section class="info-card">
+      <h2>📋 Technical Permission Justifications</h2>
+      <ul class="contact-list">
+        <li>
+          <strong>Permission: "storage"</strong>
+          <span>Required strictly to save the user's soundscape choice, volume preference, and on/off toggle state locally on their machine.</span>
+        </li>
+        <li>
+          <strong>Permission: "unlimitedStorage"</strong>
+          <span>Required to allow users to store their own optional custom MP3/WAV loop (up to 8 MB) locally via base64 encoding without exceeding browser quota limits.</span>
+        </li>
+        <li>
+          <strong>Permission: "tabs"</strong>
+          <span>Used solely to open the local onboarding guide (<code>setup.html</code>) in a new tab upon initial installation and broadcast preference changes from the popup to open AI tabs.</span>
+        </li>
+        <li>
+          <strong>Host Permissions:</strong>
+          <span>Restricted exclusively to supported AI chatbot domains (ChatGPT, Claude, Gemini, Grok, Perplexity, DeepSeek, Copilot, Poe, Mistral) to allow the content script's DOM <code>MutationObserver</code> to monitor response streaming indicators.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Developer Contact -->
+    <section class="support-box">
+      <h2>📬 Developer Contact</h2>
+      <p class="privacy-intro-text">
+        For inquiries, security questions, bug reports, contributions, or donations:
+      </p>
+      <ul class="contact-list">
+        <li>
+          <strong>Developer:</strong>
+          <span>Ojus Wankhede</span>
+        </li>
+        <li>
+          <strong>Email:</strong>
+          <span class="email-highlight">ojuswankhede@gmail.com</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="setup-footer">
+    <div class="setup-footer-credit">Built by Ojus Wankhede using AI</div>
+    <div class="setup-footer-email">Developer Contact: ojuswankhede@gmail.com</div>
+    <div class="setup-footer-sub">
+      AI Response Audio Scape • Universal MV3 Extension • Microsoft Edge, Firefox AMO, Opera, &amp; Chrome Web Store Compliant
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Response Audio Scape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+  <!-- Header -->
+  <header class="popup-header">
+    <div class="brand-group">
+      <img src="icon48.png" alt="AI Response Audio Scape Icon" class="brand-logo">
+      <div>
+        <div class="brand-title">AI Response Audio Scape</div>
+        <div class="brand-subtitle">Ambient AI Streaming Companion</div>
+      </div>
+    </div>
+    <div id="statusBadge" class="status-pill">
+      <span class="status-dot"></span>
+      <span id="statusText">Active</span>
+    </div>
+  </header>
+
+  <!-- Master Toggle Card -->
+  <section class="card-section">
+    <div class="toggle-row">
+      <div>
+        <div class="toggle-label-title">Enable Audio Scape</div>
+        <div class="toggle-label-desc">Auto-loop audio while AI writes</div>
+      </div>
+      <label class="switch" aria-label="Toggle AI Response Audio Scape">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </section>
+
+  <!-- Soundscape Selector Card -->
+  <section class="card-section">
+    <div class="section-heading">
+      <span>Select Soundscape</span>
+      <button type="button" id="previewBtn" class="link-btn">Preview Loop</button>
+    </div>
+
+    <div class="sound-grid" id="soundGrid">
+      <button type="button" class="sound-option active" data-sound="rain_loop.mp3">
+        <span class="sound-option-title">🌧️ Gentle Rain</span>
+        <span class="sound-option-meta">Warm acoustic rainfall</span>
+      </button>
+
+      <button type="button" class="sound-option" data-sound="zen_chimes.mp3">
+        <span class="sound-option-title">🎐 Zen Chimes</span>
+        <span class="sound-option-meta">Harmonic temple bells</span>
+      </button>
+
+      <button type="button" class="sound-option" data-sound="deep_space.mp3">
+        <span class="sound-option-title">🌌 Deep Space</span>
+        <span class="sound-option-meta">Cosmic binaural drone</span>
+      </button>
+
+      <button type="button" class="sound-option" data-sound="lofi_hum.mp3">
+        <span class="sound-option-title">📻 Lo-Fi Hum</span>
+        <span class="sound-option-meta">Warm analog tape pad</span>
+      </button>
+    </div>
+
+    <!-- Custom Local MP3 Option -->
+    <div class="custom-sound-row">
+      <button type="button" class="sound-option custom-full" id="customSoundOption" data-sound="custom">
+        <div>
+          <div class="sound-option-title">🎵 Custom Local MP3</div>
+          <div class="sound-option-meta" id="customFileLabel">No custom MP3 uploaded yet</div>
+        </div>
+        <span class="badge">Local DB</span>
+      </button>
+
+      <div class="upload-controls">
+        <input type="file" id="mp3FileInput" accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg" hidden>
+        <button type="button" id="uploadTriggerBtn" class="btn btn-primary btn-full">
+          Upload Custom MP3 (100% Local)
+        </button>
+      </div>
+      <div id="uploadFeedback" class="status-feedback" role="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Volume Control Card -->
+  <section class="card-section">
+    <div class="section-heading">
+      <span>Loop Volume</span>
+      <span id="volumeLabel" class="volume-value">65%</span>
+    </div>
+    <div class="volume-row">
+      <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" step="1" value="65">
+    </div>
+  </section>
+
+  <!-- Contact & Support Info Card (Zero dead buttons, clean copyable list) -->
+  <section class="contact-info-card">
+    <div class="contact-info-title">☕ Creator &amp; Support Info</div>
+    <ul class="contact-info-list">
+      <li>Contact: <span class="email-val">ojuswankhede@gmail.com</span></li>
+      <li>Bug reports &amp; errors: <span class="email-val">ojuswankhede@gmail.com</span></li>
+      <li>Donations / Buy Me a Coffee: <span class="email-val">ojuswankhede@gmail.com</span></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="popup-footer">
+    <div class="popup-footer-links">
+      <span>🔒 100% Local &amp; Zero Data</span>
+      <button type="button" id="openGuideBtn" class="link-btn">Tutorial &amp; Setup</button>
+    </div>
+    <div class="credit-micro">Built by Ojus Wankhede using AI • ojuswankhede@gmail.com</div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
